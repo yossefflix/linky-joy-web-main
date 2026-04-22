@@ -18,6 +18,7 @@ import PrivacyPage from "@/pages/PrivacyPage";
 import RefundPage from "@/pages/RefundPage";
 import NotFound from "./pages/NotFound.tsx";
 import SniplinkPayPage from "@/pages/SniplinkPayPage";
+import SniplinkPayAdminPage from "@/pages/SniplinkPayAdminPage";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
               <Route path="/admin" element={<AdminPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/sniplink-pay" element={<SniplinkPayPage />} />
+              <Route path="/sniplink-pay/admin" element={<SniplinkPayAdminPage />} />
               <Route path="/terms-and-conditions" element={<TermsPage />} />
               <Route path="/privacy-policy" element={<PrivacyPage />} />
               <Route path="/refund-policy" element={<RefundPage />} />
