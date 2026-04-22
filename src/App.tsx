@@ -34,6 +34,10 @@ const App = () => (
             {/* Admin accounts management - standalone */}
             <Route path="/admin/accounts" element={<AdminAccountsPage />} />
 
+            {/* Sniplink Pay standalone pages */}
+            <Route path="/sniplink-pay" element={<SniplinkPayPage />} />
+            <Route path="/sniplink-pay/admin" element={<SniplinkPayAdminPage />} />
+
             {/* Main site with navbar */}
             <Route element={<><Navbar /><Outlet /></>}>
               <Route path="/" element={<LandingPage />} />
@@ -42,8 +46,6 @@ const App = () => (
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/admin" element={<AdminPage />} />
               <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/sniplink-pay" element={<SniplinkPayPage />} />
-              <Route path="/sniplink-pay/admin" element={<SniplinkPayAdminPage />} />
               <Route path="/terms-and-conditions" element={<TermsPage />} />
               <Route path="/privacy-policy" element={<PrivacyPage />} />
               <Route path="/refund-policy" element={<RefundPage />} />
