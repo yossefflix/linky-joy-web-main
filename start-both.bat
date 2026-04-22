@@ -1,0 +1,9 @@
+@echo off
+echo Starting Next.js app (Sniplink Pay) on port 3000...
+start cmd /k "cd sniplink-pay && npm run dev"
+
+echo Starting Vite app (Linky Joy Web) on port 8080...
+start cmd /k "npm run dev"
+
+echo Both servers are starting...
+echo Please open http://localhost:8080/sniplink-pay in your browser.
