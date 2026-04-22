@@ -8,7 +8,6 @@ import Navbar from "@/components/Navbar";
 import RequireAuth from "@/components/RequireAuth";
 import LandingPage from "@/pages/LandingPage";
 import LoginPage from "@/pages/LoginPage";
-import AuthGatePage from "@/pages/AuthGatePage";
 import SignupPage from "@/pages/SignupPage";
 import DashboardPage from "@/pages/DashboardPage";
 import AdminPage from "@/pages/AdminPage";
@@ -18,9 +17,6 @@ import TermsPage from "@/pages/TermsPage";
 import PrivacyPage from "@/pages/PrivacyPage";
 import RefundPage from "@/pages/RefundPage";
 import NotFound from "./pages/NotFound.tsx";
-import SpecialPricingPage from "@/pages/SpecialPricingPage";
-import SaudiOfferPage from "@/pages/SaudiOfferPage";
-import SubscriptionPage from "@/pages/SubscriptionPage";
 import SniplinkPayPage from "@/pages/SniplinkPayPage";
 
 const queryClient = new QueryClient();
@@ -33,13 +29,6 @@ const App = () => (
       <BrowserRouter>
         <AuthProvider>
           <Routes>
-            {/* Auth gate for offers */}
-            <Route path="/barid" element={<AuthGatePage />} />
-
-            {/* Protected standalone pages - no navbar */}
-            <Route path="/offers" element={<RequireAuth><SpecialPricingPage /></RequireAuth>} />
-            <Route path="/saudionffer" element={<RequireAuth><SaudiOfferPage /></RequireAuth>} />
-            <Route path="/subscription" element={<RequireAuth><SubscriptionPage /></RequireAuth>} />
 
             {/* Admin accounts management - standalone */}
             <Route path="/admin/accounts" element={<AdminAccountsPage />} />
